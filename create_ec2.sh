@@ -1,5 +1,6 @@
 #! /usr/bin/env bash
-echo "Task 2: Creating EC2 instance .....\n ..........\n"
+echo "Task 2: Creating EC2 instance ..............."
+echo 
 if [ -f .env ]; then
     source .env
 fi
@@ -37,9 +38,9 @@ PUBLIC_IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID  --query "Res
 
 # Export variable so that they can be used in destroy.sh
 
-echo  "Instance created with ID: %s\n" "$INSTANCE_ID"
-echo "Public IP address: %s\n" "$PUBLIC_IP"
+echo  "Instance created with ID: $INSTANCE_ID"
+echo "Public IP address: $PUBLIC_IP"
 echo KEY_NAME=$KEY_NAME
 echo "INSTANCE_ID=$INSTANCE_ID">>.env
 echo "PUBLIC_IP=$PUBLIC_IP">>.env
-
+echo "KEY_NAME=$KEY_NAME">>.env

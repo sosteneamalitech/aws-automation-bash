@@ -1,0 +1,11 @@
+Terminating EC2 instance with ID: i-07ae1e10d470f4fea
+TERMINATINGINSTANCES	i-07ae1e10d470f4fea
+CURRENTSTATE	32	shutting-down
+PREVIOUSSTATE	16	running
+Waiting for instance to terminate...
+Instance terminated successfully.
+key-077545c5a13c4a3d0	True
+Delete security group associated with the instance...
+sg-0738b4fea9b895039	True
+Deleting all versions of objects in the bucket...
+Cleanup completed successfully.

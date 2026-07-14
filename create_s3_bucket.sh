@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-echo "Task 4: Creating S3 bucket .....\n ..........\n"
+echo "Task 4: Creating S3 bucket .................................."
+echo 
 
 if [ -f .env ]; then
     source .env

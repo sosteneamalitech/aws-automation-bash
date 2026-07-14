@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Load env
 if [ -f .env ]; then
     source .env
 fi
-# Exit immediately if a command exits with a non-zero status
-set -e
+echo "Task 3: Creating Security group ................  ................."
+echo 
+
 
 # Define variables based on the task description
 GROUP_NAME="devops-sg"
@@ -25,11 +31,11 @@ echo "Authorizing HTTP (port 80) and SSH (port 22) ingress rules..."
 aws ec2 authorize-security-group-ingress \
     --group-id "$SECURITY_GROUP_ID" \
     --ip-permissions \
-        'IpProtocol=tcp,FromPort=80,ToPort=80,IpRanges=[{CidrIp=0.0.0.0/0}]' \
-        'IpProtocol=tcp,FromPort=22,ToPort=22,IpRanges=[{CidrIp=0.0.0.0/0}]' \
-        --output text
+    'IpProtocol=tcp,FromPort=80,ToPort=80,IpRanges=[{CidrIp=0.0.0.0/0}]' \
+    'IpProtocol=tcp,FromPort=22,ToPort=22,IpRanges=[{CidrIp=0.0.0.0/0}]' \
+    --output text
 
-echo -e "--- Security Group Configuration Details ---"
+echo -e ".......... Security Group Configuration Details ............."
 echo "Security Group ID: ${SECURITY_GROUP_ID}"
 echo "Security Group Name: ${GROUP_NAME}"
 # assign the security group to the EC2 instance
