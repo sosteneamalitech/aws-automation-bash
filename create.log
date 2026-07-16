@@ -1,22 +1,21 @@
 Task 2: Creating EC2 instance ...............
 
-Creating key pair: LabServer
-Creating instance with type: t3.micro, image ID: ami-07ab13a91f7d7a8af, key name: LabServer, and tags: Project=AutomationLab
+Creating key pair: SosteneLab1Server
+Creating instance with type: t3.micro, image ID: ami-07ab13a91f7d7a8af, key name: SosteneLab1Server, and tags: Owner=sostene Project=sostene-lab1-aws-automation
 Waiting for instance to be in running state...
-Instance created with ID: i-07ae1e10d470f4fea
-Public IP address: 54.172.213.169
-KEY_NAME=LabServer
+Instance created with ID: i-0921beaae0402b28c
+Public IP address: 98.81.134.125
 Task 3: Creating Security group ................  .................
 
-Creating security group 'devops-sg'...
+Creating security group 'sostene-devops-lab1-sg'...
 Authorizing HTTP (port 80) and SSH (port 22) ingress rules...
 True
-SECURITYGROUPRULES	0.0.0.0/0	80	sg-0738b4fea9b895039	590184106649	tcp	False	arn:aws:ec2:us-east-1:590184106649:security-group-rule/sgr-0303a1c8e30068a47	sgr-0303a1c8e30068a47	80
-SECURITYGROUPRULES	0.0.0.0/0	22	sg-0738b4fea9b895039	590184106649	tcp	False	arn:aws:ec2:us-east-1:590184106649:security-group-rule/sgr-05e69112520050b33	sgr-05e69112520050b33	22
+SECURITYGROUPRULES	0.0.0.0/0	80	sg-02f4438fda2de123f	442426888142	tcp	False	arn:aws:ec2:us-east-1:442426888142:security-group-rule/sgr-047a7fe9ff4db374d	sgr-047a7fe9ff4db374d	80
+SECURITYGROUPRULES	0.0.0.0/0	22	sg-02f4438fda2de123f	442426888142	tcp	False	arn:aws:ec2:us-east-1:442426888142:security-group-rule/sgr-07f43258f755b089c	sgr-07f43258f755b089c	22
 .......... Security Group Configuration Details .............
-Security Group ID: sg-0738b4fea9b895039
-Security Group Name: devops-sg
-Primary Network Interface ID: eni-06d3fa3fdf26e6fe4
+Security Group ID: sg-02f4438fda2de123f
+Security Group Name: sostene-devops-lab1-sg
+Primary Network Interface ID: eni-0d1b70bf2d0ce91c1
 ----------------------------
 |  DescribeSecurityGroups  |
 +-------+------------+-----+
@@ -41,10 +40,11 @@ Primary Network Interface ID: eni-06d3fa3fdf26e6fe4
 Task 4: Creating S3 bucket ..................................
 
 Using target AWS region: us-east-1
-Creating S3 bucket: my-unique-bucket-1784023157...
-arn:aws:s3:::my-unique-bucket-1784023157	/my-unique-bucket-1784023157
+Creating S3 bucket: lab1-aws-automation-sostene-bucket-1784206957...
+arn:aws:s3:::lab1-aws-automation-sostene-bucket-1784206957	/lab1-aws-automation-sostene-bucket-1784206957
+Tagging S3 bucket...
 Enabling versioning on the bucket...
 Applying bucket policy...
 Creating and uploading sample file...
-PBjXtnzrF/w=	FULL_OBJECT	"c839f2c9ac07629276a9bea44fe891a7"	AES256	XgnzXPp8kuhVU1.cZEQpi4xCgF7_jn5N
- Created bucket: my-unique-bucket-1784023157
+PBjXtnzrF/w=	FULL_OBJECT	"c839f2c9ac07629276a9bea44fe891a7"	AES256	v41J2fq4BeG7dWmUZ5Z8hm4TFZiZYJwD
+ Created bucket: lab1-aws-automation-sostene-bucket-1784206957
